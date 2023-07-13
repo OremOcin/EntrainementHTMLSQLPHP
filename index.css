@@ -1,0 +1,23 @@
+#bodyIndex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40vh;
+}
+
+#infoWindow {
+  width: 70%;
+  height: 50vh;
+  background: grey;
+}
+
+table {
+  border: 2px solid black;
+}
+
+thead, th,td {
+  border: 1px solid black;
+  background: whitesmoke;
+  text-align: center;
+}
+
