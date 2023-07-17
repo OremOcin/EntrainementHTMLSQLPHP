@@ -43,10 +43,18 @@
     }
   }
 
-
-
-  //indexphp bouton qui affiche les users et lors du click une table html s'affiche et affiche également toutes les données d'une table, nom email et date
-  //faire un login php donner email password verifier que l'utilisateur est bien dans la base de données.
+  //Crée base de donnée session qui sera liée à user via une clé secondaire qui permettra de stocker si l'utilisateur est connecté à la base de donnée
+  //Et qui stock son dernier timestamp de connexion
+  //Récuperer l'adresse mac de la machine de l'utilisateur pour la stocker dans la base de donnée.
+  //Installation Symfony
+  
+  //Stocker l'email, l'adresse mac, timestamp, 
+//Utiliser le localStorage avec JS
+//Faire champ jwt
+//Modifier le contenu d'une liste avec js
+  
+  //Instaurer welcomeUser.php
+  
   ?>
 </body>
 

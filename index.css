@@ -1,14 +1,24 @@
 #bodyIndex {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.575);
   align-items: center;
-  justify-content: center;
-  margin-top: 40vh;
 }
 
 #infoWindow {
   width: 70%;
   height: 50vh;
   background: grey;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.836);
+  text-align: center;
+  color: white;
+  box-shadow: 3px 3px 5px lightgreen;
+  border-radius: 10px;
 }
 
 table {
@@ -21,3 +31,18 @@ thead, th,td {
   text-align: center;
 }
 
+#formDisplay {
+  position: absolute;
+  margin-top: 87vh;
+}
+
+#getDataButton, #sendButton {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+#formThree {
+  margin-top: 2vh;
+}
