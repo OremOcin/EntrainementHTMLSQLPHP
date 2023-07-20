@@ -42,19 +42,6 @@
       die("DB ERROR: " . $e->getMessage());
     }
   }
-
-  //Crée base de donnée session qui sera liée à user via une clé secondaire qui permettra de stocker si l'utilisateur est connecté à la base de donnée
-  //Et qui stock son dernier timestamp de connexion
-  //Récuperer l'adresse mac de la machine de l'utilisateur pour la stocker dans la base de donnée.
-  //Installation Symfony
-  
-  //Stocker l'email, l'adresse mac, timestamp, 
-//Utiliser le localStorage avec JS
-//Faire champ jwt
-//Modifier le contenu d'une liste avec js
-  
-  //Instaurer welcomeUser.php
-  
   ?>
 </body>
 

@@ -24,7 +24,6 @@
     $db = "myfirstdatabase"; // Nom de la Base
     $dsn = "mysql:host=$host;dbname=$db"; //Hote et type de base de donnée ainsi que le nom
   
-
     try {
       $pdo = new PDO($dsn, $root, $root_password); //Le Connecteur
       $sql = "SELECT email, password FROM users WHERE email = '$email'"; //Recherche du password et de l'email
