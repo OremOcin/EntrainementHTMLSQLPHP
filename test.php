@@ -2,6 +2,9 @@
 session_start();
 echo "METHOD = " . $_SERVER["REQUEST_METHOD"];
 if (isset($_SESSION['Username'])) {
+  echo '<script language="javascript">';
+  echo 'alert("welcome user ' . $_SESSION['Username'] . '")';
+  echo '</script>';
   echo "Welcome User " . $_SESSION['Username'];
 } else {
   echo "Vous n'êtes pas enregistré";

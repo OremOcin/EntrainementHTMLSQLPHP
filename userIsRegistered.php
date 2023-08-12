@@ -50,37 +50,37 @@
   $dsn = "mysql:host=$host;dbname=$db"; //Hote et type de base de donnée ainsi que le nom
   
 
-  try {
-    $macAdress = getMacAdress();
-    $myMacAdress = "";
-    $id = "";
-    $pdo = new PDO($dsn, $root, $root_password); //Le Connecteur
-    $sql = "SELECT id ,email, mac_adress FROM sessions WHERE email = '$email' AND mac_adress = '$macAdress'"; //Recherche du password et de l'email
-    echo $sql;
-    $result = $pdo->query($sql)->fetchAll();
-    if (count($result) != 0) {
-      $myMacAdress = $result[0]["mac_adress"];
-      $id = $result[0]['id'];
-      $sql = "UPDATE sessions SET timestamp = UNIX_TIMESTAMP( NOW() ) WHERE id = '$id'"; //Mise a jour du timestamp
-      $result = $pdo->query($sql)->fetchAll();
-    } else {
-      echo "<pre>";
-      print_r($result);
-      echo "</pre>";
+  /* try {
+     $macAdress = getMacAdress();
+     $myMacAdress = "";
+     $id = "";
+     $pdo = new PDO($dsn, $root, $root_password); //Le Connecteur
+     $sql = "SELECT id ,email, mac_adress FROM sessions WHERE email = '$email' AND mac_adress = '$macAdress'"; //Recherche du password et de l'email
+     echo $sql;
+     $result = $pdo->query($sql)->fetchAll();
+     if (count($result) != 0) {
+       $myMacAdress = $result[0]["mac_adress"];
+       $id = $result[0]['id'];
+       $sql = "UPDATE sessions SET timestamp = UNIX_TIMESTAMP( NOW() ) WHERE id = '$id'"; //Mise a jour du timestamp
+       $result = $pdo->query($sql)->fetchAll();
+     } else {
+       echo "<pre>";
+       print_r($result);
+       echo "</pre>";
 
-      echo "Mac adress is " . $macAdress;
-      $sql = "INSERT INTO sessions (id, email, timestamp, mac_adress) VALUES(UUID(),'$email', UNIX_TIMESTAMP( NOW() ), '$macAdress')";
-      echo "<pre>";
-      echo "SQL =" . $sql;
-      echo "</pre>";
-      $result = $pdo->query($sql)->fetchAll();
-      /* echo "<pre>";
-       print_r("result =" . $result);
-       echo "</pre>"; */
-    }
-  } catch (PDOException $e) {
+       echo "Mac adress is " . $macAdress;
+       $sql = "INSERT INTO sessions (id, email, timestamp, mac_adress) VALUES(UUID(),'$email', UNIX_TIMESTAMP( NOW() ), '$macAdress')";
+       echo "<pre>";
+       echo "SQL =" . $sql;
+       echo "</pre>";
+       $result = $pdo->query($sql)->fetchAll();
+       /* echo "<pre>";
+        print_r("result =" . $result);
+        echo "</pre>"; */
+  /*  }
+ /* } catch (PDOException $e) {
     die("DB ERROR: " . $e->getMessage());
-  }
+  }*/
   session_start();
   $_SESSION["Username"] = $email;
   header("location: test.php");
